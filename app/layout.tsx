@@ -9,10 +9,60 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Tu Nombre - Desarrollador & Diseñador",
+  metadataBase: new URL("https://zotti.site"),
+  title: {
+    default: "Tomás Bearzotti - Desarrollador & Diseñador",
+    template: "%s | Tomás Bearzotti"
+  },
   description:
-    "Portafolio personal de Tu Nombre. Desarrollador full-stack especializado en crear experiencias digitales excepcionales.",
-  generator: "v0.app",
+    "Portafolio personal de Tomás Bearzotti. Desarrollador full-stack especializado en crear experiencias digitales excepcionales.",
+  keywords: ["desarrollador web", "full-stack developer", "React", "Next.js", "TypeScript", "diseño web", "portfolio", "Tomás Bearzotti"],
+  authors: [{ name: "Tomás Bearzotti" }],
+  creator: "Tomás Bearzotti",
+  publisher: "Tomás Bearzotti",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    url: "https://zotti.site",
+    title: "Tomás Bearzotti - Desarrollador & Diseñador",
+    description: "Portafolio personal de Tomás Bearzotti. Desarrollador full-stack especializado en crear experiencias digitales excepcionales.",
+    siteName: "Tomás Bearzotti Portfolio",
+    images: [
+      {
+        url: "/placeholder.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Tomás Bearzotti - Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tomás Bearzotti - Desarrollador & Diseñador",
+    description: "Portafolio personal de Tomás Bearzotti. Desarrollador full-stack especializado en crear experiencias digitales excepcionales.",
+    images: ["/placeholder.jpg"],
+    creator: "@tuusuario", // Cambia esto por tu handle de Twitter si lo tienes
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  // Descomenta y agrega tu código de Google Search Console cuando lo tengas:
+  // verification: {
+  //   google: "tu-codigo-de-verificacion",
+  // },
   icons: {
     icon: [
       {
@@ -61,6 +111,26 @@ export default function RootLayout({
                 }
               })();
             `,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Tomás Bearzotti",
+              url: "https://zotti.site",
+              jobTitle: "Desarrollador Full-Stack",
+              description: "Desarrollador full-stack especializado en crear experiencias digitales excepcionales.",
+              sameAs: [
+                // Agrega aquí tus perfiles de redes sociales
+                // "https://github.com/TomasBearzotti",
+                // "https://linkedin.com/in/tu-perfil",
+                // "https://twitter.com/tu-usuario"
+              ],
+              knowsAbout: ["React", "Next.js", "TypeScript", "JavaScript", "Web Development", "Full-Stack Development"]
+            })
           }}
         />
       </head>
