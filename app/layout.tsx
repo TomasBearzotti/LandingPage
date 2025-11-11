@@ -124,12 +124,10 @@ export default function RootLayout({
               jobTitle: "Desarrollador Full-Stack",
               description: "Desarrollador full-stack especializado en crear experiencias digitales excepcionales.",
               sameAs: [
-                // Agrega aquí tus perfiles de redes sociales
-                // "https://github.com/TomasBearzotti",
-                // "https://linkedin.com/in/tu-perfil",
-                // "https://twitter.com/tu-usuario"
+                "https://github.com/TomasBearzotti"
               ],
-              knowsAbout: ["React", "Next.js", "TypeScript", "JavaScript", "Web Development", "Full-Stack Development"]
+              knowsAbout: ["React", "Next.js", "TypeScript", "JavaScript", "Web Development", "Full-Stack Development"],
+              image: "https://zotti.site/placeholder.jpg"
             })
           }}
         />
