@@ -1,31 +1,25 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Linkedin, Github, Twitter } from "lucide-react"
+import { Mail, Linkedin, Github } from "lucide-react"
 
 const socialLinks = [
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:tu@email.com",
-    label: "tu@email.com",
+    href: "mailto:tomas.bearzotti@proton.me",
+    label: "tomas.bearzotti@proton.me",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com/in/tuusuario",
-    label: "/tuusuario",
+    href: "https://linkedin.com/in/tomasbearzotti",
+    label: "/tomasbearzotti",
   },
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com/tuusuario",
-    label: "@tuusuario",
-  },
-  {
-    name: "Twitter",
-    icon: Twitter,
-    href: "https://twitter.com/tuusuario",
-    label: "@tuusuario",
+    href: "https://github.com/tomasbearzotti",
+    label: "@tomasbearzotti",
   },
 ]
 
@@ -42,7 +36,7 @@ export function Contact() {
 
         <Card className="border-border/50">
           <CardContent className="p-8">
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-3 gap-6">
               {socialLinks.map((link, index) => (
                 <a
                   key={index}
@@ -65,7 +59,7 @@ export function Contact() {
             <div className="mt-8 pt-8 border-t border-border/50 text-center">
               <p className="text-muted-foreground mb-4">¿Prefieres enviar un mensaje directo?</p>
               <Button size="lg" asChild>
-                <a href="mailto:tu@email.com">
+                <a href="mailto:tomas.bearzotti@proton.me">
                   <Mail className="mr-2 h-5 w-5" />
                   Enviar Email
                 </a>
@@ -75,7 +69,7 @@ export function Contact() {
         </Card>
 
         <footer className="mt-16 pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Tu Nombre. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Tomás Bearzotti. Todos los derechos reservados.</p>
         </footer>
       </div>
     </section>

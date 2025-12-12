@@ -11,12 +11,12 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   metadataBase: new URL("https://zotti.site"),
   title: {
-    default: "Tomás Bearzotti - Desarrollador & Diseñador",
+    default: "Tomás Bearzotti | Full Stack Developer & Analista en Sistemas",
     template: "%s | Tomás Bearzotti"
   },
   description:
-    "Portafolio personal de Tomás Bearzotti. Desarrollador full-stack especializado en crear experiencias digitales excepcionales.",
-  keywords: ["desarrollador web", "full-stack developer", "React", "Next.js", "TypeScript", "diseño web", "portfolio", "Tomás Bearzotti"],
+    "Analista en sistemas y estudiante de ingeniería especializado en desarrollo full-stack, bases de datos y análisis de datos. Desarrollador en Rootstock Labs.",
+  keywords: ["desarrollador web", "full-stack developer", "Python", "React", "Node.js", "bases de datos", "análisis de datos", "Tomás Bearzotti"],
   authors: [{ name: "Tomás Bearzotti" }],
   creator: "Tomás Bearzotti",
   publisher: "Tomás Bearzotti",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     url: "https://zotti.site",
-    title: "Tomás Bearzotti - Desarrollador & Diseñador",
-    description: "Portafolio personal de Tomás Bearzotti. Desarrollador full-stack especializado en crear experiencias digitales excepcionales.",
+    title: "Tomás Bearzotti | Full Stack Developer & Analista en Sistemas",
+    description: "Analista en sistemas y estudiante de ingeniería especializado en desarrollo full-stack, bases de datos y análisis de datos.",
     siteName: "Tomás Bearzotti Portfolio",
     images: [
       {
@@ -43,10 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tomás Bearzotti - Desarrollador & Diseñador",
-    description: "Portafolio personal de Tomás Bearzotti. Desarrollador full-stack especializado en crear experiencias digitales excepcionales.",
+    title: "Tomás Bearzotti | Full Stack Developer & Analista en Sistemas",
+    description: "Analista en sistemas y estudiante de ingeniería especializado en desarrollo full-stack, bases de datos y análisis de datos.",
     images: ["/placeholder.jpg"],
-    creator: "@tuusuario", // Cambia esto por tu handle de Twitter si lo tienes
   },
   robots: {
     index: true,
@@ -66,19 +65,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/icon-32x32.png",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/icon-32x32.png",
   },
 }
 

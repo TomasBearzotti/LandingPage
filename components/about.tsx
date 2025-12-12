@@ -1,26 +1,26 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Code2, Palette, Rocket, Users } from "lucide-react"
+import { Code2, Database, BarChart3, Boxes } from "lucide-react"
 
 const skills = [
   {
     icon: Code2,
-    title: "Desarrollo",
-    description: "Especializado en tecnologías modernas y mejores prácticas",
+    title: "Desarrollo Full Stack",
+    description: "Construcción de aplicaciones web con Python, React y Node.js",
   },
   {
-    icon: Palette,
-    title: "Diseño",
-    description: "Creación de interfaces intuitivas y visualmente atractivas",
+    icon: Database,
+    title: "Bases de Datos",
+    description: "Diseño y optimización de bases de datos SQL y NoSQL",
   },
   {
-    icon: Rocket,
-    title: "Innovación",
-    description: "Siempre explorando nuevas tecnologías y metodologías",
+    icon: BarChart3,
+    title: "Análisis de Datos",
+    description: "Procesamiento y visualización de información para toma de decisiones",
   },
   {
-    icon: Users,
-    title: "Colaboración",
-    description: "Trabajo en equipo y comunicación efectiva",
+    icon: Boxes,
+    title: "Diseño de Software",
+    description: "Arquitectura de soluciones escalables y código limpio",
   },
 ]
 
@@ -37,9 +37,7 @@ export function About() {
 
         <div className="mb-12 max-w-3xl mx-auto">
           <p className="text-foreground/90 leading-relaxed text-center text-lg">
-            Soy un desarrollador full-stack apasionado por crear soluciones innovadoras. Me especializo en transformar
-            ideas complejas en aplicaciones simples y elegantes. Mi enfoque combina pensamiento técnico con sensibilidad
-            de diseño para entregar productos excepcionales.
+            Soy analista en sistemas, actualmente estudiando ingeniería en sistemas de información. Tengo experiencia en desarrollo full-stack, especializado en crear aplicaciones web robustas utilizando Python y React, con énfasis en el diseño de bases de datos eficientes y análisis de datos. Mi enfoque combina desarrollo técnico con buenas prácticas de diseño para crear soluciones escalables y mantenibles.
           </p>
         </div>
 

@@ -5,31 +5,34 @@ import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
-    title: "Proyecto E-commerce",
+    title: "ClubMaster",
     description:
-      "Plataforma completa de comercio electrónico con carrito de compras, pagos integrados y panel de administración.",
-    image: "/modern-ecommerce-website.png",
-    tags: ["Next.js", "TypeScript", "Stripe"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "Sistema integral de gestión para clubes deportivos. Centraliza la administración: gestión de socios, control de cuotas, organización de torneos, contratación de árbitros y seguimiento de estadísticas.",
+    image: "/Screenshot_Clubmaster.jpg",
+    tags: ["React", "C#", ".NET", "SQL Server"],
+    liveUrl: "https://demo.clubmaster.zotti.site",
+    githubUrl: "https://github.com/TomasBearzotti/ClubMaster-Web",
+    hasDemo: true,
   },
   {
-    title: "App de Gestión de Tareas",
+    title: "Tienda Fácil",
     description:
-      "Aplicación de productividad con colaboración en tiempo real, etiquetas personalizadas y recordatorios.",
-    image: "/task-management-app.png",
-    tags: ["React", "Node.js", "MongoDB"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "Sistema de gestión para mercados. Control de proveedores, stocks, ventas y reportes. Incluye sistema de facturas para maximizar la eficiencia del negocio.",
+    image: "/Screenshot_TiendaFacil.jpg",
+    tags: ["C#", ".NET", "WinForms", "SQL Server"],
+    liveUrl: "",
+    githubUrl: "https://github.com/TomasBearzotti/FinalDAS-TiendaFacil",
+    hasDemo: false,
   },
   {
-    title: "Dashboard Analytics",
+    title: "Club WindowsForms",
     description:
-      "Panel de control con visualizaciones de datos interactivas y reportes personalizables en tiempo real.",
-    image: "/analytics-dashboard.png",
-    tags: ["Vue.js", "D3.js", "PostgreSQL"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "Proyecto de gestión de club deportivo desarrollado en WindowsForms. Aplicación de escritorio para Programación Orientada a Objetos.",
+    image: "/Club.png",
+    tags: ["C#", "WinForms", "POO"],
+    liveUrl: "",
+    githubUrl: "https://github.com/TomasBearzotti/FinalPOO-Club",
+    hasDemo: false,
   },
 ]
 
@@ -46,7 +49,7 @@ export function Projects() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden border-border/50 hover:shadow-lg transition-all group">
+            <Card key={index} className="overflow-hidden border-border/50 hover:shadow-lg transition-all group flex flex-col">
               <CardHeader className="p-0">
                 <div className="relative aspect-video overflow-hidden bg-muted">
                   <img
@@ -56,7 +59,7 @@ export function Projects() {
                   />
                 </div>
               </CardHeader>
-              <CardContent className="p-6 space-y-3">
+              <CardContent className="p-6 space-y-3 flex-grow">
                 <h3 className="font-semibold text-xl">{project.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
@@ -67,13 +70,15 @@ export function Projects() {
                   ))}
                 </div>
               </CardContent>
-              <CardFooter className="p-6 pt-0 flex gap-3">
-                <Button variant="outline" size="sm" className="flex-1 bg-transparent" asChild>
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Demo
-                  </a>
-                </Button>
+              <CardFooter className="p-6 pt-0 flex gap-3 justify-center">
+                {project.hasDemo && (
+                  <Button variant="outline" size="sm" className="flex-1 bg-transparent" asChild>
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      Demo
+                    </a>
+                  </Button>
+                )}
                 <Button variant="outline" size="sm" className="flex-1 bg-transparent" asChild>
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" />
