@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Download } from "lucide-react"
+import { ArrowRight, ExternalLink } from "lucide-react"
 import Image from "next/image"
 
 export function Hero() {
@@ -20,7 +20,7 @@ export function Hero() {
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-accent blur-md opacity-75" />
             <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-background shadow-xl">
               <Image
-                src="/profile.jpg"
+                src="https://avatars.githubusercontent.com/u/177166753?v=4"
                 alt="Tomás Bearzotti"
                 width={160}
                 height={160}
@@ -52,9 +52,9 @@ export function Hero() {
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
           <Button size="lg" variant="outline" asChild>
-            <a href="/CV - Bearzotti.pdf" download="CV-Tomas-Bearzotti.pdf">
-              <Download className="mr-2 h-4 w-4" />
-              Descargar CV
+            <a href="https://rxresu.me/tomas.bearzotti/cv-tomasbearzotti" target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="mr-2 h-4 w-4" />
+              Abrir CV
             </a>
           </Button>
           <Button size="lg" variant="outline" onClick={() => scrollToSection("contacto")}>
