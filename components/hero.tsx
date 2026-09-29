@@ -1,16 +1,22 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight, ExternalLink } from "lucide-react"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" })
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+      element.scrollIntoView({
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+        block: "start",
+      });
     }
-  }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
@@ -34,7 +40,9 @@ export function Hero() {
         <div className="space-y-4">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-balance">
             Hola, soy{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Tomás Bearzotti</span>
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Tomás Bearzotti
+            </span>
           </h1>
           <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto text-balance">
             Full Stack Developer • Analista en Sistemas
@@ -42,22 +50,36 @@ export function Hero() {
         </div>
 
         <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed text-pretty">
-          Analista en sistemas y estudiante de ingeniería, especializado en desarrollo full-stack y análisis de datos.
-          Apasionado por crear soluciones tecnológicas eficientes con foco en diseño de bases de datos y arquitectura de software.
+          Analista en sistemas y estudiante de ingeniería, especializado en
+          desarrollo full-stack y análisis de datos. Apasionado por crear
+          soluciones tecnológicas eficientes con foco en diseño de bases de
+          datos y arquitectura de software.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-          <Button size="lg" className="group" onClick={() => scrollToSection("proyectos")}>
+          <Button
+            size="lg"
+            className="group"
+            onClick={() => scrollToSection("proyectos")}
+          >
             Ver mis proyectos
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
           <Button size="lg" variant="outline" asChild>
-            <a href="https://rxresu.me/tomas.bearzotti/cv-tomasbearzotti" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://rxresu.me/tomas.bearzotti/cv-tomasbearzotti"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <ExternalLink className="mr-2 h-4 w-4" />
               Abrir CV
             </a>
           </Button>
-          <Button size="lg" variant="outline" onClick={() => scrollToSection("contacto")}>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={() => scrollToSection("contacto")}
+          >
             Contactar
           </Button>
         </div>
@@ -69,5 +91,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
